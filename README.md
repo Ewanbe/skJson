@@ -8,7 +8,7 @@
 
 
 <p align="center" width="100%">
-    <img width="60%" size="64" src="https://media.discordapp.net/attachments/967325659523321926/1089508231329624215/skJsonBanner.png"> 
+    <img width="60%" size="64" src="https://www.skjson.xyz/imgs/skjson/banner.png"> 
 </p>
 
 
