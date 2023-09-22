@@ -5,20 +5,14 @@ import ch.njol.skript.expressions.base.PropertyExpression;
 import ch.njol.skript.lang.*;
 import ch.njol.skript.lang.function.Functions;
 import ch.njol.skript.lang.function.JavaFunction;
-import ch.njol.skript.lang.function.SimpleJavaFunction;
-import ch.njol.skript.registrations.DefaultClasses;
 import cz.coffee.skjson.api.Cache.JsonWatcher;
 import cz.coffee.skjson.api.Config;
 import cz.coffee.skjson.api.SkriptLoaderFile;
-import cz.coffee.skjson.skript.SkJsonFunctions;
-import cz.coffee.skjson.skript.base.JsonSize;
-import cz.coffee.skjson.skript.requests.Requests;
 import cz.coffee.skjson.utils.Util;
 import org.bukkit.Bukkit;
 import org.bukkit.Server;
 import org.bukkit.event.Event;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
 import java.io.IOException;
@@ -44,6 +38,17 @@ public final class SkJson extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        if (!Bukkit.getServer().getName().equals("CraftBukkit")) {
+            System.out.println("\033[0;33m");
+            System.out.println("");
+            System.out.println("");
+            System.out.println("");
+            System.out.println("You are running on Spigot version, the hex or Compoments may not works!");
+            System.out.println("Please download the version for Paper/Purpur https://github.com/SkJsonTeam/skJson/releases/download/2.9/skJson-2.9.jar");
+            System.out.println("");
+            System.out.println("");
+            System.out.println("\033[0m");
+        }
         try {
             config.init();
         } catch (IOException e) {
