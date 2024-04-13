@@ -21,6 +21,7 @@ for /f "tokens=1,* delims=%delimiter%" %%a in ("!jarFileName!") do (
 )
 set "Dversion=!token[0]:~0,-4!"
 REM Install the JAR file into the local Maven repository
+echo !Dversion!
 call mvn install:install-file -Dfile=build/libs/%jarFileName% -DgroupId=com.shanebeestudios.skbee -DartifactId=skbee -Dversion=!Dversion! -Dpackaging=jar
 REM Delete the SkBee directory
 cd ..
