@@ -150,7 +150,7 @@ on script load:
     link json file {@file_path} as "your_specified_value" if json file {@file_path} exists
     
     # here we will set value to memory reference of your file.
-    set value of json objct "location" in (json "your_specified_value") to location(10, 20, 30, world("world"))
+    set value of json object "location" in (json "your_specified_value") to location(10, 20, 30, world("world"))
     
     # here we will get location of memory
     set {_location} to value "location" of (json "your_specified_value")
